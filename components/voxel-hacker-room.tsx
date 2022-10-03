@@ -18,7 +18,10 @@ const VoxelHackerRoom = () => {
     const refContainer = useRef() as MutableRefObject<HTMLInputElement>
     const [loading, setLoading] = useState(true)
     const refRenderer = useRef<any>()
-    const HackerRoomGLB = '/hacker-room.glb'
+    const HackerRoomGLB =
+        process.env.NODE_ENV === 'production'
+            ? 'https://0xprathamcdn.pages.dev/hacker-room.glb'
+            : '/hacker-room.glb'
 
     const handleWindowResize = useCallback(() => {
         const { current: renderer } = refRenderer
@@ -54,7 +57,7 @@ const VoxelHackerRoom = () => {
                 20 * Math.cos(0.2 * Math.PI)
             )
 
-            const scale = scH * 0.008
+            const scale = scH * 0.005 + 2.8
             const camera = new THREE.OrthographicCamera(
                 -scale,
                 scale,
