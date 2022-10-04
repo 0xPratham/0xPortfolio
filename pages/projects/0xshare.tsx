@@ -38,15 +38,15 @@ const AnonymousShare = () => {
                     </ListItem>
                 </List>
                 <ProjectImage
-                    src="/images/projects/0xshare/0xshare-home.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/0xshare/0xshare-home.webp`}
                     alt="0xshare HomePage"
                 />
                 <ProjectImage
-                    src="/images/projects/0xshare/0xshare-pricing.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/0xshare/0xshare-pricing.webp`}
                     alt="0xshare Pricing"
                 />
                 <ProjectImage
-                    src="/images/projects/0xshare/0xshare-checkout.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/0xshare/0xshare-checkout.webp`}
                     alt="0xshare Checkout"
                 />
             </Container>

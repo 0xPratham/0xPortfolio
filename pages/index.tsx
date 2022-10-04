@@ -19,8 +19,6 @@ import { BioSection, BioTimeLine } from '../components/bio'
 import Layout from '../components/layouts/article'
 import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
 import { GridItem } from '../components/grid-item'
-import Share from '../public/images/projects/0xshare/0xshare-home.png'
-import Dedinfosec from '../public/images/projects/blog/blog-website-home.png'
 
 const Home: NextPage = () => {
     return (
@@ -131,7 +129,7 @@ const Home: NextPage = () => {
                         <GridItem
                             href="https://0xshare.vercel.app"
                             title="0xShare"
-                            thumbnail={Share.src}
+                            thumbnail={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/0xshare/0xshare-home.webp`}
                             width="2880px"
                             height="1652px"
                         >
@@ -140,7 +138,7 @@ const Home: NextPage = () => {
                         <GridItem
                             href="https://0xdedinfosec.vercel.app"
                             title="0xDedinfosec Blog"
-                            thumbnail={Dedinfosec.src}
+                            thumbnail={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/blog/blog-website-home.webp`}
                             width="2880px"
                             height="1652px"
                         >

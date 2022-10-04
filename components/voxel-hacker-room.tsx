@@ -18,10 +18,7 @@ const VoxelHackerRoom = () => {
     const refContainer = useRef() as MutableRefObject<HTMLInputElement>
     const [loading, setLoading] = useState(true)
     const refRenderer = useRef<any>()
-    const HackerRoomGLB =
-        process.env.NODE_ENV === 'production'
-            ? 'https://0xprathamcdn.pages.dev/hacker-room.glb'
-            : '/hacker-room.glb'
+    const HackerRoomGLB = 'https://0xprathamcdn.pages.dev/hacker-room.glb'
 
     const handleWindowResize = useCallback(() => {
         const { current: renderer } = refRenderer

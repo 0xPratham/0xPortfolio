@@ -41,15 +41,15 @@ const ProHackAcademy = () => {
                     </ListItem>
                 </List>
                 <ProjectImage
-                    src="/images/projects/ctf/ctf-website-home.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/ctf/ctf-website-home.webp`}
                     alt="ProHackAcademy HomePage"
                 />
                 <ProjectImage
-                    src="/images/projects/ctf/ctf-website-dashboard.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/ctf/ctf-website-dashboard.webp`}
                     alt="ProHackAcademy Dashboard"
                 />
                 <ProjectImage
-                    src="/images/projects/ctf/ctf-website-profile.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/ctf/ctf-website-profile.webp`}
                     alt="ProHackAcademy Profile"
                 />
             </Container>

@@ -2,6 +2,9 @@
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
+    images: {
+        domains: ['0xprathamcdn.pages.dev']
+    },
     async headers() {
         return [
             {

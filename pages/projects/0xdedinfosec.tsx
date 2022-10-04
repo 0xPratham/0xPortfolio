@@ -31,15 +31,15 @@ const Dedinfosec = () => {
                     </ListItem>
                 </List>
                 <ProjectImage
-                    src="/images/projects/blog/blog-website-home.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/blog/blog-website-home.webp`}
                     alt="Blog HomePage"
                 />
                 <ProjectImage
-                    src="/images/projects/blog/blog-website-writeup.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/blog/blog-website-writeup.webp`}
                     alt="Blog Writeup"
                 />
                 <ProjectImage
-                    src="/images/projects/blog/blog-website-archives.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/blog/blog-website-archives.webp`}
                     alt="Blog Archives"
                 />
             </Container>

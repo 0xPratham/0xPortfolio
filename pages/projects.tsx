@@ -2,9 +2,6 @@ import type { NextPage } from 'next'
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Section from '../components/section'
 import { ProjectsGridItem } from '../components/grid-item'
-import CtfWebsiteHome from '../public/images/projects/ctf/ctf-website-home.png'
-import ShareHomePage from '../public/images/projects/0xshare/0xshare-home.png'
-import BlogHomePage from '../public/images/projects/blog/blog-website-home.png'
 import Layout from '../components/layouts/article'
 
 const Projects: NextPage = () => {
@@ -19,7 +16,7 @@ const Projects: NextPage = () => {
                         <ProjectsGridItem
                             id="prohackacademy"
                             title="ProHackAcademy"
-                            thumbnail={CtfWebsiteHome.src}
+                            thumbnail={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/ctf/ctf-website-home.webp`}
                             width="720px"
                             height="400px"
                         >
@@ -31,7 +28,7 @@ const Projects: NextPage = () => {
                         <ProjectsGridItem
                             id="0xshare"
                             title="0xShare"
-                            thumbnail={ShareHomePage.src}
+                            thumbnail={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/0xshare/0xshare-home.webp`}
                             width="2880px"
                             height="1652px"
                         >
@@ -43,7 +40,7 @@ const Projects: NextPage = () => {
                         <ProjectsGridItem
                             id="0xdedinfosec"
                             title="0xDedinfosec Blog"
-                            thumbnail={BlogHomePage.src}
+                            thumbnail={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/blog/blog-website-home.webp`}
                             width="1366px"
                             height="768px"
                         >
