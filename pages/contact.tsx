@@ -114,7 +114,7 @@ const Posts = () => {
                                     as={Input}
                                     name="email"
                                     type="email"
-                                    placeholder="hr@company.com"
+                                    placeholder="ceo@company.com"
                                 />
                                 <FormErrorMessage>
                                     {formik.errors.email}
