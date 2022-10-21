@@ -47,14 +47,14 @@ const VoxelHackerRoom = () => {
             refRenderer.current = renderer
             const scene = new THREE.Scene()
 
-            const target = new THREE.Vector3(-0.5, 1.2, 0)
+            const target = new THREE.Vector3(1.5, 4.2, 0)
             const initialCameraPosition = new THREE.Vector3(
                 20 * Math.sin(0.2 * Math.PI),
                 10,
                 20 * Math.cos(0.2 * Math.PI)
             )
 
-            const scale = scH * 0.005 + 2.8
+            const scale = scH * 0.005 + 10
             const camera = new THREE.OrthographicCamera(
                 -scale,
                 scale,
