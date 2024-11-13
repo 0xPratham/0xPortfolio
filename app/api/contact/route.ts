@@ -1,3 +1,4 @@
+import { NextResponse } from 'next/server'
 import { ValidationError } from 'yup'
 import { ContactUsSchema } from '../../../lib/validationSchema'
 
@@ -13,7 +14,7 @@ export async function POST(request: Request) {
         const captchaToken = body.captchaToken
 
         if (!captchaToken) {
-            return Response.json(
+            return NextResponse.json(
                 {
                     status: false,
                     message: 'Captcha token required'
@@ -39,7 +40,7 @@ export async function POST(request: Request) {
         const outcome = await result.json()
 
         if (!outcome.success) {
-            return Response.json(
+            return NextResponse.json(
                 {
                     status: false,
                     message: 'Captcha verification failed'
@@ -55,7 +56,7 @@ export async function POST(request: Request) {
         const message = body.message
 
         if (!name || !email || !message) {
-            return Response.json(
+            return NextResponse.json(
                 {
                     status: false,
                     message: 'All fields required'
@@ -77,7 +78,7 @@ export async function POST(request: Request) {
             )
         } catch (e) {
             if (e instanceof ValidationError) {
-                return Response.json(
+                return NextResponse.json(
                     {
                         status: false,
                         message: e.message
@@ -87,7 +88,7 @@ export async function POST(request: Request) {
                     }
                 )
             }
-            return Response.json(
+            return NextResponse.json(
                 {
                     status: false,
                     message: 'Validation failed'
@@ -110,7 +111,7 @@ export async function POST(request: Request) {
             })
         } catch (error) {
             console.log(error)
-            return Response.json(
+            return NextResponse.json(
                 {
                     status: false,
                     message: 'Something went wrong. Please try again.'
@@ -121,7 +122,7 @@ export async function POST(request: Request) {
             )
         }
 
-        return Response.json(
+        return NextResponse.json(
             {
                 status: true,
                 message: 'Message sent successfully'
@@ -132,7 +133,7 @@ export async function POST(request: Request) {
         )
     } catch (error) {
         console.log(error)
-        return Response.json(
+        return NextResponse.json(
             {
                 status: false,
                 message: 'Something went wrong. Please try again.'
