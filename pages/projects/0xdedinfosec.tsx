@@ -3,11 +3,15 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, ProjectImage, Meta } from '../../components/projects'
 import Para from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
+import Head from 'next/head'
 
 const Dedinfosec = () => {
     return (
-        <Layout title="0xDedinfosec Blog">
-            <Container>
+        <Layout>
+            <Head>
+                <title>0xDedinfosec Blog - 0xPratham</title>
+            </Head>
+            <Container mb={10}>
                 <Title>
                     0xDedinfosec Blog <Badge>2020</Badge>
                 </Title>

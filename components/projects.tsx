@@ -16,7 +16,7 @@ export const Title = ({ children }: TitleProps) => {
     return (
         <>
             <Box>
-                <NextLink href="/projects">
+                <NextLink href="/projects" prefetch={true}>
                     <Link>Projects</Link>
                 </NextLink>
             </Box>

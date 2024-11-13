@@ -1,7 +1,6 @@
 import * as Yup from 'yup'
-import { NextApiRequest } from 'next'
 
-export const schema = Yup.object({
+export const ContactUsSchema = Yup.object({
     name: Yup.string()
         .required('Name required')
         .min(3, 'Name is too short')
@@ -15,13 +14,3 @@ export const schema = Yup.object({
         .min(10, 'Message is too short')
         .max(500, 'Message is too long')
 })
-
-export const validateSchema = async (req: NextApiRequest) => {
-    try {
-        await schema.validate(req.body)
-        return true
-    } catch (e: any) {
-        console.log(e)
-        return e?.errors[0]
-    }
-}

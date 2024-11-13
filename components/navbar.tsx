@@ -28,7 +28,7 @@ const LinkItem = (items: LinkItems) => {
     let active = items.path === items.href
     let inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
     return (
-        <NextLink href={items.href ? items.href : ''}>
+        <NextLink href={items.href ? items.href : ''} prefetch={true}>
             <Link
                 p={2}
                 bg={active ? 'grassTeal' : undefined}
@@ -93,16 +93,28 @@ const Navbar = (props: LinkItems) => {
                                 aria-label="Options"
                             />
                             <MenuList>
-                                <NextLink href="/" passHref>
+                                <NextLink href="/" passHref prefetch={true}>
                                     <MenuItem as={Link}>About</MenuItem>
                                 </NextLink>
-                                <NextLink href="/projects" passHref>
+                                <NextLink
+                                    href="/projects"
+                                    passHref
+                                    prefetch={true}
+                                >
                                     <MenuItem as={Link}>Projects</MenuItem>
                                 </NextLink>
-                                <NextLink href="/posts" passHref>
+                                <NextLink
+                                    href="/posts"
+                                    passHref
+                                    prefetch={true}
+                                >
                                     <MenuItem as={Link}>Posts</MenuItem>
                                 </NextLink>
-                                <NextLink href="/contact" passHref>
+                                <NextLink
+                                    href="/contact"
+                                    passHref
+                                    prefetch={true}
+                                >
                                     <MenuItem as={Link}>Contact</MenuItem>
                                 </NextLink>
                             </MenuList>

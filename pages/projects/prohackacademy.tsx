@@ -3,11 +3,15 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, ProjectImage, Meta } from '../../components/projects'
 import Para from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
+import Head from 'next/head'
 
 const ProHackAcademy = () => {
     return (
-        <Layout title="ProHackAcademy">
-            <Container>
+        <Layout>
+            <Head>
+                <title>ProHackAcademy - 0xPratham</title>
+            </Head>
+            <Container mb={10}>
                 <Title>
                     ProHackAcademy <Badge>2020 - 2022</Badge>
                 </Title>

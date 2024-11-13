@@ -3,7 +3,9 @@ const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
     images: {
-        domains: ['0xprathamcdn.pages.dev']
+        minimumCacheTTL: 31536000,
+        domains: ['0xprathamcdn.pages.dev'],
+        formats: ['image/avif', 'image/webp']
     },
     async headers() {
         return [

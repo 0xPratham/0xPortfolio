@@ -19,11 +19,15 @@ import { BioSection, BioTimeLine } from '../components/bio'
 import Layout from '../components/layouts/article'
 import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
 import { GridItem } from '../components/grid-item'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
     return (
-        <Layout title="Home">
-            <Container>
+        <Layout>
+            <Head>
+                <title>Home - 0xPratham</title>
+            </Head>
+            <Container mb={10}>
                 <Box
                     display="flex"
                     borderRadius="lg"
@@ -32,8 +36,8 @@ const Home: NextPage = () => {
                     textAlign="center"
                     mb="6"
                 >
-                    Hello, I&apos;m pratham Information security enthusiast and
-                    a full stack developer
+                    Hello, I&apos;m Pratham, an Application Security enthusiast
+                    and Full Stack Developer
                 </Box>
                 <Box display={{ md: 'flex' }}>
                     <Box flexGrow={1}>
@@ -41,8 +45,8 @@ const Home: NextPage = () => {
                             Pratham
                         </Heading>
                         <p>
-                            Network, Web Application Penetration Tester | Full
-                            Stack Developer | CTF Player
+                            System Administrator | Application Security
+                            Specialist | Full Stack Developer | CTF Enthusiast
                         </p>
                     </Box>
                 </Box>
@@ -51,15 +55,16 @@ const Home: NextPage = () => {
                         About
                     </Heading>
                     <Paragraph>
-                        A Self-learner IT professional seeking a technical
-                        position in which I can apply existing skills and
-                        continue to work with the latest technologies. With
-                        professional experience in information technology, my
-                        expertise revolves around Network, Web Application
-                        Penetration Testing.
+                        Self-motivated IT professional seeking a technical
+                        position where I can leverage my existing skills and
+                        continue working with the latest technologies. With
+                        professional experience in information technology, I
+                        bring expertise in system administration, web
+                        application penetration testing, and full stack
+                        development.
                     </Paragraph>
                     <Box textAlign="center" my={4}>
-                        <NextLink href="/projects">
+                        <NextLink href="/projects" prefetch={true}>
                             <Button
                                 rightIcon={<ChevronRightIcon />}
                                 colorScheme="teal"
@@ -79,8 +84,9 @@ const Home: NextPage = () => {
                     </BioSection>
                     <BioSection>
                         <BioTimeLine>2024</BioTimeLine>
-                        Completed the Btech In Cyber Security at the Panipat
-                        Institute of Engineering and Technology
+                        Completed a Bachelor of Technology (B.Tech) in Computer
+                        Science and Engineering at Sarvepalli Radhakrishnan
+                        University, Bhopal
                     </BioSection>
                 </Section>
                 <Section delay="0.3">
@@ -88,14 +94,15 @@ const Home: NextPage = () => {
                         I ♥
                     </Heading>
                     <Paragraph>
-                        CTF, Web Development, Gaming, Linux Privilege Escalation
+                        Capture the Flag (CTF) Competitions, Web Development,
+                        Gaming, System Security, and System Administration
                     </Paragraph>
                 </Section>
                 <Section delay="0.3">
                     <Heading as="h3" variant="section-title">
                         On the web
                     </Heading>
-                    <List>
+                    <List mb={4}>
                         <ListItem>
                             <Link
                                 href="https://github.com/0xPratham"
@@ -127,26 +134,26 @@ const Home: NextPage = () => {
                     </List>
                     <SimpleGrid columns={[1, 2, 2]} gap={6}>
                         <GridItem
-                            href="https://0xshare.vercel.app"
-                            title="0xShare"
-                            thumbnail={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/0xshare/0xshare-home.webp`}
-                            width="2880px"
-                            height="1652px"
+                            href="https://thefileslab.com"
+                            title="The Files Lab"
+                            thumbnail={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/thefileslab/main.png`}
+                            width={2880}
+                            height={1652}
                         >
-                            Anonymous File Sharing Website
+                            Share And Convert Files Confidentially
                         </GridItem>
                         <GridItem
-                            href="https://0xdedinfosec.vercel.app"
-                            title="0xDedinfosec Blog"
-                            thumbnail={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/blog/blog-website-home.webp`}
-                            width="2880px"
-                            height="1652px"
+                            href="https://cyberunfolded.in"
+                            title="CyberUnfolded"
+                            thumbnail={`${process.env.NEXT_PUBLIC_CDN_URL}/images/projects/cyberunfolded/main.png`}
+                            width={2880}
+                            height={1652}
                         >
                             Hackthebox Blog Website
                         </GridItem>
                     </SimpleGrid>
                     <Box textAlign="center" my={4}>
-                        <NextLink href="/posts">
+                        <NextLink href="/posts" prefetch={true}>
                             <Button
                                 rightIcon={<ChevronRightIcon />}
                                 colorScheme="teal"

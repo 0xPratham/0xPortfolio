@@ -10,8 +10,8 @@ interface props {
     title: string
     thumbnail: string
     id?: string
-    width: string
-    height: string
+    width: number
+    height: number
 }
 
 export const GridItem = ({
@@ -54,7 +54,7 @@ export const ProjectsGridItem = ({
 }: props) => {
     return (
         <Box w="100%" textAlign="center">
-            <NextLink href={`/projects/${id}`}>
+            <NextLink href={`/projects/${id}`} prefetch={true}>
                 <LinkBox cursor="pointer">
                     <Image
                         src={thumbnail}

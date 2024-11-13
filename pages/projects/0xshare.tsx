@@ -3,11 +3,15 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, ProjectImage, Meta } from '../../components/projects'
 import Para from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
+import Head from 'next/head'
 
 const AnonymousShare = () => {
     return (
-        <Layout title="0xShare">
-            <Container>
+        <Layout>
+            <Head>
+                <title>0xShare - 0xPratham</title>
+            </Head>
+            <Container mb={10}>
                 <Title>
                     0xShare <Badge>2022</Badge>
                 </Title>

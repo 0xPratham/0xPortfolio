@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import Head from 'next/head'
 import { GridItemStyle } from '../grid-item'
 import { ReactNode } from 'react'
 
@@ -11,23 +10,19 @@ const variants = {
 
 interface props {
     children: ReactNode
-    title: string
 }
 
-const Layout = ({ children, title }: props) => {
+const Layout = ({ children }: props) => {
     return (
         <motion.article
             initial="hidden"
             animate="enter"
             exit="exit"
             variants={variants}
-            transition={{ duration: 0.4, type: 'easeInOut' }}
+            transition={{ duration: 0.4, type: 'tween' }}
             style={{ position: 'relative' }}
         >
             <>
-                <Head>
-                    <title>{title} - 0xPratham</title>
-                </Head>
                 {children}
                 <GridItemStyle />
             </>
